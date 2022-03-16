@@ -9,3 +9,24 @@ highScoreEl.addEventListener("click", () => {
 
 document.body.appendChild(highScoreEl);
 
+//Questions
+var questions = [
+    {
+        question: "A very useful tool used during development and debugging for printing conent to the debugger is:",
+        answers: {
+            1: 'JavaScript',
+            2: 'terminal/bash',
+            3: 'for loops',
+            4: 'console log'
+        },
+        correctAnswer: '4'
+        },
+        {question:"",
+        answer: {
+            1:,
+            
+        }
+
+    }
+    }
+]
