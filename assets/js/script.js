@@ -1,3 +1,4 @@
+var currentQuestionIndex = 0;
 
 // Creating View high score button
 var highScoreEl = document.createElement('button');
@@ -9,21 +10,36 @@ highScoreEl.addEventListener("click", () => {
 });
 
 document.body.appendChild(highScoreEl);
+//Questions
+var questions = [
+    {
+        question: "A very useful tool used during development and debugging for printing conent to the debugger is:",
+        answers: {1: 'JavaScript', 2: 'terminal/bash', 3: 'for loops', 4: 'console log'},
+        correctAnswer: '4'
+    },
+    {
+        question:" Which of the following is a valid type of function javascript supports?",
+        answer: {1:'named function', 2: 'anonymous function', 3: 'both of the above', 4: 'none of the above'},
+        correctAnswer: '3'
+    },
+    {
+    question: "The 'function' and 'var' are known as:",
+        answers: {1: 'Declaration statements', 2: 'Data Types', 3: 'Keywords', 4: 'Prototypes'},
+        correctAnswer: '1'
+    },
+    {
+        question: "Which of the following variables takes precedence over the others if the names are the same?",
+        answers: {1: 'Global variable', 2: 'The local element', 3: 'The local variable', 4: 'None of the above'},
+        correctAnswer: '2'
+    }
+];
 
-
+function nextQuestions () {
+    
+}
 function startQuiz () {
     var click = document.getElementById("quiz")
     click.remove();
-    document.getElementById("hidden-question").classList.remove('hide')
-    
-    var button1 = document.querySelector("choice4")
-        if (choice4 == 'console log')
-            {
-                document.getElementById("hidden-question").classList.remove('hide')
-                console.log("this is working")
-            }
 };
-
-
 
 document.getElementById("start-quiz").addEventListener('click', startQuiz);
