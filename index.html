@@ -11,20 +11,27 @@
     <h1 class="timer">Timer:</h1>
 
     <main>
-        <div class="quiz">
+        <div id="quiz">
             <h1 class="quiz-title"> Coding Quiz Challenge</h1>
             <p class="quiz-info">Try to answer the following code-related questions within the time limit.
                 Keep in mind that incorrect answers will penalize your score/time by ten seconds!
             <button id="start-quiz">Start Quiz</button>
             </p>
-                <h1 id="question1" hidden>A very useful tool used during development and debugging for printing conent to the debugger is:</h1>
-                <button id="choice1" hidden>JavaScript</button>
-                <button id="choice2" hidden>terminal/bash</button>
-                <button id="choice3" hidden>for loops</button>
-                <button id="choice4" hidden>console log</button>
-            </div>
-            <div id="quiz"></div>
         </div>
+            <div id='hidden-question' class="hide">
+                <h1 id="question1">A very useful tool used during development and debugging for printing conent to the debugger is:</h1>
+                <button id="choice1">JavaScript</button>
+                <button id="choice2">terminal/bash</button>
+                <button id="choice3">for loops</button>
+                <button id="choice4">console log</button>
+            </div>
+            <div id='hidden-question' class="hide">
+                <h1 id="question2">Which of the following is a valid type of function javascript supports?</h1>
+                <button id="choice1">named function</button>
+                <button id="choice2">anonymous function</button>
+                <button id="choice3">both of the above</button>
+                <button id="choice4">none of the above</button>
+            </div>
     </main>
 
 

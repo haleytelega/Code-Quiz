@@ -1,3 +1,4 @@
+
 // Creating View high score button
 var highScoreEl = document.createElement('button');
 highScoreEl.textContent = "View high score";
@@ -11,8 +12,18 @@ document.body.appendChild(highScoreEl);
 
 
 function startQuiz () {
-    console.log("this function is working");
-    document.getElementById("start-quiz").hidden = true;
+    var click = document.getElementById("quiz")
+    click.remove();
+    document.getElementById("hidden-question").classList.remove('hide')
+    
+    var button1 = document.querySelector("choice4")
+        if (choice4 == 'console log')
+            {
+                document.getElementById("hidden-question").classList.remove('hide')
+                console.log("this is working")
+            }
 };
+
+
 
 document.getElementById("start-quiz").addEventListener('click', startQuiz);
