@@ -34,9 +34,18 @@ var questions = [
     }
 ];
 
-function nextQuestions () {
-    
-}
+function nextQuestions (currentQuestionIndex) {
+    var currentQuestion = questions[currentQuestionIndex];
+
+        questionsDiv.innerHTML = "";
+
+        for (var i = 0; i < questions.length; i++) {
+            var userQuestion = questions[currentQuestionIndex].question;
+
+            questionsDiv.textContent = userQuestion;
+        }
+};
+
 function startQuiz () {
     var click = document.getElementById("quiz")
     click.remove();
