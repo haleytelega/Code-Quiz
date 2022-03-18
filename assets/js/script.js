@@ -35,19 +35,18 @@ var questions = [
 ];
 
 function nextQuestions () {
-    var currentQuestion = questions[currentQuestionIndex];
+    var currentQuestion = questions[currentQuestionIndex].question;
+    var currentAnswers = questions.answers;
 
-    var questionDiv  = document.createElement("div");
+    var questionsDiv  = document.createElement("div");
     var answersDiv = document.createElement("div");
-    questionDiv.innerHTML = "";
+    questionsDiv.innerHTML = "";
     answersDiv.innerHTML = "";
-        for (var i = 0; i < questions.length; i++) {
-            var userQuestion = questions[currentQuestionIndex].question;
-            var userAnswers =  questions[currentQuestionIndex].answer;
 
-            quiz.textContent = userQuestion;
-            userAnswers.textContent = userAnswers;
-        }
+        currentQuestionIndex++
+
+            questionsDiv.textContent = currentQuestion;
+            answersDiv.textContent = currentAnswers;
 };
 
 function startQuiz () {
@@ -55,6 +54,6 @@ function startQuiz () {
     click.remove();
 };
 
-// document.getElementById("start-quiz").addEventListener('click', startQuiz);
+document.getElementById("start-quiz").addEventListener('click', startQuiz);
 
 document.getElementById("start-quiz").addEventListener('click', nextQuestions);
