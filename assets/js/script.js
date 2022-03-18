@@ -37,16 +37,17 @@ var questions = [
 function nextQuestions () {
     var currentQuestion = questions[currentQuestionIndex];
 
-        questionsDiv.innerHTML = "";
-        answersDiv.innerHTML = "";
+    var questionDiv  = document.createElement("div");
+    var answersDiv = document.createElement("div");
+    questionDiv.innerHTML = "";
+    answersDiv.innerHTML = "";
         for (var i = 0; i < questions.length; i++) {
             var userQuestion = questions[currentQuestionIndex].question;
             var userAnswers =  questions[currentQuestionIndex].answer;
 
-            questionsDiv.textContent = userQuestion;
+            quiz.textContent = userQuestion;
             userAnswers.textContent = userAnswers;
         }
-
 };
 
 function startQuiz () {
@@ -54,4 +55,6 @@ function startQuiz () {
     click.remove();
 };
 
-document.getElementById("start-quiz").addEventListener('click', startQuiz);
+// document.getElementById("start-quiz").addEventListener('click', startQuiz);
+
+document.getElementById("start-quiz").addEventListener('click', nextQuestions);
