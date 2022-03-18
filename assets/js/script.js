@@ -34,16 +34,19 @@ var questions = [
     }
 ];
 
-function nextQuestions (currentQuestionIndex) {
+function nextQuestions () {
     var currentQuestion = questions[currentQuestionIndex];
 
         questionsDiv.innerHTML = "";
-
+        answersDiv.innerHTML = "";
         for (var i = 0; i < questions.length; i++) {
             var userQuestion = questions[currentQuestionIndex].question;
+            var userAnswers =  questions[currentQuestionIndex].answer;
 
             questionsDiv.textContent = userQuestion;
+            userAnswers.textContent = userAnswers;
         }
+
 };
 
 function startQuiz () {
