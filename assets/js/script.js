@@ -14,39 +14,46 @@ document.body.appendChild(highScoreEl);
 var questions = [
     {
         question: "A very useful tool used during development and debugging for printing conent to the debugger is:",
-        answers: {1: 'JavaScript', 2: 'terminal/bash', 3: 'for loops', 4: 'console log'},
+        answers: ['JavaScript', 'terminal/bash', 'for loops', 'console log'],
         correctAnswer: '4'
     },
     {
         question:" Which of the following is a valid type of function javascript supports?",
-        answer: {1:'named function', 2: 'anonymous function', 3: 'both of the above', 4: 'none of the above'},
+        answer: ['named function', 'anonymous function', 'both of the above', 'none of the above'],
         correctAnswer: '3'
     },
     {
     question: "The 'function' and 'var' are known as:",
-        answers: {1: 'Declaration statements', 2: 'Data Types', 3: 'Keywords', 4: 'Prototypes'},
+        answers: ['Declaration statements', 'Data Types', 'Keywords', 'Prototypes'],
         correctAnswer: '1'
     },
     {
         question: "Which of the following variables takes precedence over the others if the names are the same?",
-        answers: {1: 'Global variable', 2: 'The local element', 3: 'The local variable', 4: 'None of the above'},
+        answers: ['Global variable', 'The local element', 'The local variable', 'None of the above'],
         correctAnswer: '2'
     }
 ];
 
 function nextQuestions () {
     var currentQuestion = questions[currentQuestionIndex].question;
-    var currentAnswers = questions.answers;
+    var currentAnswers = questions[currentQuestionIndex].answers;
+
+    // var answer = currentAnswers[i];
+    // for (var i = 1; i <= 1; i++) 
 
     var questionsDiv  = document.createElement("div");
+    questionsDiv.className = 'question-div';
     var answersDiv = document.createElement("div");
+    answersDiv.className = 'answers-div'
     questionsDiv.innerHTML = "";
     answersDiv.innerHTML = "";
 
-        currentQuestionIndex++
-
             questionsDiv.textContent = currentQuestion;
             answersDiv.textContent = currentAnswers;
+
+            document.body.appendChild(questionsDiv);
+            document.body.appendChild(answersDiv);
+            console.log(answersDiv);
 };
 
 function startQuiz () {

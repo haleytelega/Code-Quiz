@@ -65,3 +65,14 @@ button {
     width: 130px;
     height: 35px;  
 }
+
+.question-div {
+    font-size: 30px;
+    font-family: sans-serif
+}
+
+.answers-div {
+    font-size: 15;
+    font-family: sans-serif;
+    word-spacing: 15px;
+}
